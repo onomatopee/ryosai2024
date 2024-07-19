@@ -1,0 +1,82 @@
+$base: #221202
+$font: #fff9e6
+$decoration: #3c2105
+$green: #729930
+$pink: #c08096
+$orange: #bd481f
+$white: #E6E6FF
+
+=font-jp
+  font:
+    family: "Sawarabi Gothic", sans-serif
+    weight: 400
+    style: normal
+    optical-sizing: auto
+
+=font-en
+  font:
+    family: "Poppins", sans-serif
+    weight: 700
+    style: normal
+
+.font-en
+  +font-en
+
+=header
+  margin-bottom: 20px
+  h1
+    font-size: 38px
+    line-height: 73%
+    position: relative
+    color: $white
+    top: -1px
+    left: -3px
+    +font-en
+
+=main
+  align-items: center
+  display: grid
+  justify-content: center
+  margin-bottom: 50px
+
+=island
+  width: 70vw
+  padding: 7%
+  margin-top: 30px
+  background-color: $white
+  box-shadow: 15px 15px 0px 0 black
+  h1
+    font-size: 15px
+  p
+    font-size: 10px
+
+=footer
+  display: grid
+  margin-top: 30px
+  width: 100%
+  background-color: black
+  color: white
+  padding: 5%
+  position: relative
+  bottom: 0px
+  h1
+    font-size: 10px
+  a
+    color: white
+  p
+    font-size: 7px
+
+
+body
+  background-image: url("../img/background.jpg")
+
+*
+  padding: 0vw
+  margin: 0vw
+
+h1, h2, h3, h4, h5, h6, p, li, a
+  +font-jp
+
+a
+  text-decoration: none
+
