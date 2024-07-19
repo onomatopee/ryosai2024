@@ -9,8 +9,8 @@ body {
 }
 
 * {
-  padding: 0vw;
-  margin: 0vw;
+  padding: 0px;
+  margin: 0px;
 }
 
 h1, h2, h3, h4, h5, h6, p, li, a {
@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, h6, p, li, a {
 
 a {
   text-decoration: none;
-  border-bottom: 0.25vw solid #7A7AFF;
+  border-bottom: 2px solid #7A7AFF;
   color: black;
 }
 
@@ -35,7 +35,7 @@ header h1 {
   position: relative;
   color: #E6E6FF;
   top: -1px;
-  left: -3px;
+  top-left: -3px;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -65,7 +65,6 @@ main {
 footer {
   display: grid;
   margin-top: 30px;
-  width: 100%;
   background-color: black;
   color: white;
   padding: 5%;
