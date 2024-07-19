@@ -22,6 +22,8 @@ h1, h2, h3, h4, h5, h6, p, li, a {
 
 a {
   text-decoration: none;
+  border-bottom: 0.25vw solid #7A7AFF;
+  color: black;
 }
 
 header {
@@ -47,7 +49,7 @@ main {
 }
 
 .island {
-  width: 70vw;
+  width: 80%;
   padding: 7%;
   margin-top: 30px;
   background-color: #E6E6FF;
