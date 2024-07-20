@@ -36,7 +36,7 @@ header h1 {
   position: relative;
   color: #E6E6FF;
   top: -1px;
-  top-left: -3px;
+  left: -3px;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -67,7 +67,7 @@ footer {
   display: grid;
   margin-top: 30px;
   background-color: black;
-  color: white;
+  color: #E6E6FF;
   padding: 5%;
   position: relative;
   bottom: 0px;
@@ -76,10 +76,9 @@ footer h1 {
   font-size: 10px;
 }
 footer a {
-  color: white;
+  color: #E6E6FF;
+  border-bottom: 2px solid #E6E6FF;
 }
 footer p {
   font-size: 7px;
-}
-
-/*# sourceMappingURL=stylesheet.css.map */
+}/*# sourceMappingURL=stylesheet.css.map */
