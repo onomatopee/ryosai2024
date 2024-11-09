@@ -1,65 +1,162 @@
-$blue: #7A7AFF
-$white: #E6E6FF
+$blue: #00205D
+$gray: #C6C6C6
+$brown: #654313
+$yellow: #EDD312
+$green: #1DBF3D
+$red: #E02172
+$yellow_light: #FFE83C
+$green_light: #5FFF71
+$red_light: #FF4091
 
-=font-jp
+@function width_mobile($val, $width: 392)
+  @return calc($val / $width * 100)
+
+@function height_mobile($val, $height: 840)
+  @return calc($val / $height * 100)
+
+=img-wrap
+  @keyframes img-wrap
+    0%
+      clip-path: circle(0 at 50% 50%)
+    100%
+      clip-path: circle(100% at 50% 50%)
+
+=serif
   font:
-    family: "Sawarabi Gothic", sans-serif
-    weight: 400
-    style: normal
+    family: "Noto Serif JP", serif
     optical-sizing: auto
-
-=font-en
-  font:
-    family: "Poppins", sans-serif
-    weight: 700
+    weight: 500
     style: normal
 
-.font-en
-  +font-en
+=sans
+  font:
+    family: "Noto Sans JP", serif
+    optical-sizing: auto
+    weight: 500
+    style: normal
 
-=header
-  margin-bottom: 20px
-  h1
-    font-size: 38px
-    line-height: 73%
-    position: relative
-    color: $white
-    top: -1px
-    left: -3px
-    +font-en
+=header_mobile
+  width: 100vw
+  height: 100vh
+  background-image: url("../img/header_background.jpg")
+  background-size: cover
+  #slide
+    width: width_mobile(400vw)
+    height: width_mobile(400vw)
+    top: height_mobile(92vh)
+    left: width_mobile(47vw)
+    border-radius: 50%
+    position: absolute
+    animation: img-wrap 2s cubic-bezier(0.4, 0, 0.2, 1) infinite
+    +img-wrap
+  #ryosai
+    width: height_mobile(120vh)
+    top: height_mobile(-15vh)
+    left: width_mobile(40vw)
+    transform: rotate(0.04turn)
+    position: absolute
+  #year
+    height: height_mobile(130vh)
+    top: height_mobile(480vh)
+    left: width_mobile(-21vw)
+    transform: rotate(0.04turn)
+    position: absolute
+  #date
+    height: height_mobile(70vh)
+    top: height_mobile(648vh)
+    left: width_mobile(23vw)
+    transform: rotate(0.04turn)
+    position: absolute
 
-=main
-  align-items: center
-  display: grid
-  justify-content: center
-  margin-bottom: 50px
+=nav
+  // default
+  #menu
+    width: 100vw
+    height: 100vh
+    overflow: hidden
+    position: fixed
+    top: 531vw
+    left: 0vw
+    z-index: 90
+    transition: 0.7s ease-out
+    background-image: url("../img/background.png")
+    background-size: cover
+    img
+      position: relative
+      top: height_mobile(15vh)
+      height: height_mobile(60vh)
+      margin-left: width_mobile(40vw)
+      margin-top: height_mobile(60vh)
+      display: block
+      transform: rotate(0.04turn)
 
-=island
-  width: 60%
-  padding: 7%
-  margin: 30px auto 0px auto
-  background-color: $white
-  box-shadow: 15px 15px 0px 0 black
-  h1
-    font-size: 20px
-  p
-    font-size: 15px
+  .menu_circle
+    width: width_mobile(90vw)
+    height: width_mobile(90vw)
+    position: absolute
+    background-color: $brown
+    top: width_mobile(25vw)
+    left: width_mobile(25vw)
+    border-radius: 50%
+    z-index: -1
 
-=footer
-  display: grid
-  margin-top: 30px
-  background-color: black
-  color: $white
-  padding: 5%
-  position: relative
-  bottom: 0px
-  h1
-    font-size: 10px
-  a
-    color: $white
-    border-bottom: 2px solid $white
-  p
-    font-size: 7px
+  input[type="checkbox"]
+    display: none
+  label
+    width: width_mobile(90vw)
+    height: width_mobile(90vw)
+    position: fixed
+    bottom: width_mobile(35vw)
+    left: width_mobile(270vw)
+    border-radius: 50%
+    background-color: $blue
+    cursor: pointer
+    box-shadow: 5px 10px 10px $gray
+    z-index: 99
+    transition: 0.7s ease-out
+    img
+      width: width_mobile(80vw)
+      height: width_mobile(80vw)
+      position: absolute
+      top: width_mobile(5vw)
+      left: width_mobile(5vw)
+      right: width_mobile(5vw)
+      bottom: width_mobile(5vw)
+      margin: auto
+    div::before, div::after
+      content: ""
+      transition: 0.7s ease-out
+
+  // checked
+  input[type="checkbox"]:checked ~
+    #menu
+      top: 0
+
+    label
+      box-shadow: none
+      background-color: $gray
+      img
+        opacity: 0
+      div::before, div::after
+        background-color: $blue
+        width: 70%
+        height: 0.5vw
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        margin: auto
+        content: ""
+      div::before
+        transform: rotate(-45deg)
+      div::after
+        transform: rotate(45deg)
+
+=main_mobile
+
+=footer_mobile
+
 
 
 body
@@ -71,7 +168,7 @@ body
   margin: 0px
 
 h1, h2, h3, h4, h5, h6, p, li, a
-  +font-jp
+  +sans
 
 a
   text-decoration: none

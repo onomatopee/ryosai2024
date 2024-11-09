@@ -1,13 +1,41 @@
 @import "util"
+@import "utilpc"
 
-header
-  +header
+@media screen and (min-width: 960px)
+  $width: 1280
+  $height: 800
 
-main
-  +main
-  
-.island
-  +island
+  nav
+    display: none
 
-footer
-  +footer
+@media screen and (max-width: 960px)
+  $width: 392
+  $height: 840
+
+  header
+    +header_mobile
+
+  #year
+    animation: fill 3s linear infinite
+    stroke: #3bff59
+    fill: none
+
+  @keyframes fill
+    0%
+      fill-opacity: 0
+      fill: transparent
+    70%
+      fill-opacity: 1
+      fill: transparent
+    85%
+      fill-opacity: 1
+      fill: $green_light
+    100%
+      fill-opacity: 1
+      fill: $green_light
+
+  nav
+    +nav
+
+  aside
+    display: none
