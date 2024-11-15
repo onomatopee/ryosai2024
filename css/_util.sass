@@ -2,8 +2,8 @@ $blue: #00205D
 $gray: #C6C6C6
 $brown: #654313
 $yellow: #EDD312
-$green: #1DBF3D
-$red: #E02172
+$green: #169b31
+$red: #b41959
 $yellow_light: #FFE83C
 $green_light: #5FFF71
 $red_light: #FF4091
@@ -14,12 +14,29 @@ $red_light: #FF4091
 @function height_mobile($val, $height: 840)
   @return calc($val / $height * 100)
 
-=img-wrap
-  @keyframes img-wrap
-    0%
-      clip-path: circle(0 at 50% 50%)
-    100%
-      clip-path: circle(100% at 50% 50%)
+.red
+  color: $red
+
+.green
+  color: $green
+
+.gray
+  color: $gray
+
+.brown
+  color: $brown
+
+.red_back
+  background-color: $red
+
+.green_back
+  background-color: $green
+
+.gray_back
+  background-color: $gray
+
+.brown_back
+  background-color: $brown
 
 =serif
   font:
@@ -40,15 +57,25 @@ $red_light: #FF4091
   height: 100vh
   background-image: url("../img/header_background.jpg")
   background-size: cover
-  #slide
+  .slide_edge
+    width: 100vw
+    height: 100vh
+    top: 0px
+    left: 0px
+    position: absolute
+    overflow: hidden
+  .slide
     width: width_mobile(400vw)
     height: width_mobile(400vw)
     top: height_mobile(92vh)
     left: width_mobile(47vw)
     border-radius: 50%
+    display: block
     position: absolute
-    animation: img-wrap 2s cubic-bezier(0.4, 0, 0.2, 1) infinite
-    +img-wrap
+    transition: all 1s ease
+    opacity: 0
+  .active
+    opacity: 1
   #ryosai
     width: height_mobile(120vh)
     top: height_mobile(-15vh)
@@ -91,8 +118,8 @@ $red_light: #FF4091
       transform: rotate(0.04turn)
 
   .menu_circle
-    width: width_mobile(90vw)
-    height: width_mobile(90vw)
+    width: width_mobile(80vw)
+    height: width_mobile(80vw)
     position: absolute
     background-color: $brown
     top: width_mobile(25vw)
@@ -103,11 +130,11 @@ $red_light: #FF4091
   input[type="checkbox"]
     display: none
   label
-    width: width_mobile(90vw)
-    height: width_mobile(90vw)
+    width: width_mobile(80vw)
+    height: width_mobile(80vw)
     position: fixed
-    bottom: width_mobile(35vw)
-    left: width_mobile(270vw)
+    bottom: width_mobile(40vw)
+    right: width_mobile(30vw)
     border-radius: 50%
     background-color: $blue
     cursor: pointer
@@ -115,8 +142,8 @@ $red_light: #FF4091
     z-index: 99
     transition: 0.7s ease-out
     img
-      width: width_mobile(80vw)
-      height: width_mobile(80vw)
+      width: width_mobile(70vw)
+      height: width_mobile(70vw)
       position: absolute
       top: width_mobile(5vw)
       left: width_mobile(5vw)
@@ -154,8 +181,88 @@ $red_light: #FF4091
         transform: rotate(45deg)
 
 =main_mobile
+  // height: 200vh
+  background-image: url("../img/background.png")
+  background-size: contain
+  padding-top: 300px
+  overflow: hidden
+  .sec
+    width: 80%
+    position: relative
+    left: 10%
+    color: $gray
+    margin-bottom: 50vh
+    z-index: 1
+    img
+      height: 70px
+
+  .belt
+    width: 160vw
+    height: 20vh
+    position: absolute
+    top: -50px
+    left: -40vw
+    transform: rotate(30deg)
+    border-bottom: none
+    z-index: -1
+  
+  .right_box
+    width: 70%
+    position: absolute
+    left: 30%
+    top: 90px
+    p
+      font-size: 15px
+      margin-bottom: 20px
+  
+  .button
+    margin-top: 15px
+    padding: 10px
+    border-radius: 30px
+    display: block
+    text-align: center
+    vertical-align: middle
+    width: 80%
+    margin: auto
+    padding: 5px 20px
+    font-weight: bold
+    border-radius: 3px
+    color: $gray
+    border: 1px solid $gray
+    box-shadow: 3px 3px $gray
+    transition: 0.3s ease-in-out
+    h1
+      font-size: 20px
+
+  #crowdfunding_img
+    height: 50px
+
+  #crowdfunding_txt
+    font-size: 12px
+
+  #sponsor
+    width: 100%
+    height: auto
+    margin-top: 15px
+
+  #sponsor_box
+    margin-top: 20px
+    text-align: center
+    h1
+      font-size: 20px
+    p
+      font-size: 15px
+      margin-bottom: 20px
 
 =footer_mobile
+  padding: 5vh
+  background-color: $blue
+  color: $gray
+  h1
+    font-size: 15px
+  p
+    font-size: 12px
+    margin-top: 15px
 
 
 
@@ -172,6 +279,6 @@ h1, h2, h3, h4, h5, h6, p, li, a
 
 a
   text-decoration: none
-  border-bottom: 2px solid $blue
-  color: black
+  border-bottom: 2px solid $yellow
+  color: $gray
 
