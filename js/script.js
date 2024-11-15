@@ -1,24 +1,37 @@
-const path_anime1 = anime({
-  targets: '#year path',
-  strokeDashoffset: [anime.setDashoffset, 0],
-  easing: 'easeInOutSine',
-  duration: 1500,
-  direction: 'alternate',
-  loop: true
+
+window.addEventListener("load", function () {
+  const elm = document.querySelectorAll(".scroll_animation");
+  console.log(screen.width);
+  const scroll = window.scrollY;
+  if (scroll > 500 && screen.width > 960) {
+    for (let i = 0; i < elm.length; i++) {
+      elm[i].style.opacity = "1";
+      elm[i].style.zIndex = "1";
+    }
+  } else if (screen.width > 960) {
+    for (let i = 0; i < elm.length; i++) {
+      elm[i].style.opacity = "0";
+      elm[i].style.zIndex = "-1";
+    }
+  }
 });
 
-// const img = document.getElementById("slide");
-// let imgN = 1;
-// function imgStr(imgN) {
-//   return "img/" + String(imgN%10) + ".jpg";
-// }
-// document.addEventListener('DOMContentLoaded', () => {
-//   img.src = imgStr(imgN);
-// });
-// setInterval(() => {
-//   imgN++;
-//   img.src = imgStr(imgN);
-// }, 2000);
+window.addEventListener("scroll", function () {
+  const elm = document.querySelectorAll(".scroll_animation");
+  console.log(screen.width);
+  const scroll = window.scrollY;
+  if (scroll > 500 && screen.width > 960) {
+    for (let i = 0; i < elm.length; i++) {
+      elm[i].style.opacity = "1";
+      elm[i].style.zIndex = "1";
+    }
+  } else if (screen.width > 960) {
+    for (let i = 0; i < elm.length; i++) {
+      elm[i].style.opacity = "0";
+      elm[i].style.zIndex = "-1";
+    }
+  }
+});
 
 const imgs = document.querySelectorAll(".slide");
 let imgN = 1;

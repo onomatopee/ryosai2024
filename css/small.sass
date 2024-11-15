@@ -5,15 +5,25 @@
   $width: 1280
   $height: 800
 
+  body
+    +body_pc
+
   nav
     display: none
+
+  aside
+    +aside
+
+  main
+    +main_pc
+    padding-bottom: 50vh
+    
+  footer
+    +footer_pc
 
 @media screen and (max-width: 960px)
   $width: 392
   $height: 840
-
-  header
-    +header_mobile
 
   nav
     +nav
@@ -23,7 +33,7 @@
 
   main
     +main_mobile
-
+    padding-bottom: 50vh
 
   footer
     +footer_mobile

@@ -1,0 +1,45 @@
+@import "util"
+@import "utilpc"
+
+@media screen and (min-width: 960px)
+  $width: 1280
+  $height: 800
+
+  body
+    +body_pc
+
+  nav
+    display: none
+
+  aside
+    +aside
+
+  main
+    +main_pc
+    padding-bottom: 50vh
+    iframe
+      margin-top: 10vh
+      width: 32vw
+      height: 18vw
+
+  footer
+    +footer_pc
+
+@media screen and (max-width: 960px)
+  $width: 392
+  $height: 840
+
+  nav
+    +nav
+
+  aside
+    display: none
+
+  main
+    +main_mobile
+    padding-bottom: 50vh
+    iframe
+      margin-top: 10vh
+
+  footer
+    +footer_mobile

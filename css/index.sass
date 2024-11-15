@@ -1,0 +1,265 @@
+@import "util"
+@import "utilpc"
+
+@media screen and (min-width: 960px)
+  $width: 1280
+  $height: 800
+
+  header
+    width: 100vw
+    height: 100vh
+    .slide
+      width: 40vw
+      height: 40vw
+      border-radius: 50%
+      top: 6vw
+      right: 10vw
+      position: absolute
+      display: block
+      overflow: hidden
+      transition: all 1s ease
+      opacity: 0
+    .active
+      opacity: 1
+    #ryosai
+      width: height_pc(120vh)
+      top: height_pc(30vh)
+      left: width_pc(60vw)
+      position: absolute
+    #year
+      height: height_pc(130vh)
+      top: height_pc(490vh)
+      left: width_pc(60vw)
+      position: absolute
+    #date
+      height: height_pc(70vh)
+      top: height_pc(660vh)
+      left: width_pc(60vw)
+      position: absolute
+    
+  body
+    +body_pc
+
+  nav
+    display: none
+
+  aside
+    +aside
+
+  main
+    width: 40vw
+    margin-top: 10vh
+    margin-left: 12vw
+    border-radius: 10vh
+    background-image: url("../img/background.png")
+    background-size: contain
+    padding-top: 20vh
+    overflow: hidden
+    transition: 0.8s ease-in-out
+    .sec
+      width: 80%
+      position: relative
+      left: 10%
+      color: $gray
+      margin-bottom: 50vh
+      z-index: 1
+      img
+        height: 70px
+
+    .belt
+      width: 200%
+      height: 15vh
+      position: absolute
+      //top: -50px
+      left: -40%
+      transform: rotate(30deg)
+      border-bottom: none
+      z-index: -1
+    
+    .right_box
+      width: 80%
+      position: absolute
+      left: 20%
+      top: 90px
+      p
+        font-size: 15px
+        margin-bottom: 20px
+    
+    .button
+      margin-top: 15px
+      padding: 10px
+      border-radius: 30px
+      display: block
+      text-align: center
+      vertical-align: middle
+      width: 80%
+      margin: auto
+      padding: 5px 20px
+      font-weight: bold
+      border-radius: 3px
+      color: $gray
+      border: 1px solid $gray
+      box-shadow: 3px 3px $gray
+      transition: 0.3s ease-in-out
+      h1
+        font-size: 20px
+
+    #crowdfunding_img
+      height: 50px
+
+    #crowdfunding_txt
+      font-size: 12px
+
+    #sponsor
+      width: 100%
+      height: auto
+      margin-top: 15px
+
+    #sponsor_box
+      margin-top: 20px
+      text-align: center
+      h1
+        font-size: 20px
+      p
+        font-size: 15px
+        margin-bottom: 20px
+
+    #last_sec
+      margin-bottom: 20vh
+
+
+  footer
+    +footer_pc
+
+
+@media screen and (max-width: 960px)
+  $width: 392
+  $height: 840
+
+  header
+    width: 100vw
+    height: 100vh
+    background-image: url("../img/header_background.jpg")
+    background-size: cover
+    .slide_edge
+      width: 100vw
+      height: 100vh
+      top: 0px
+      left: 0px
+      position: absolute
+      overflow: hidden
+    .slide
+      width: width_mobile(400vw)
+      height: width_mobile(400vw)
+      top: height_mobile(92vh)
+      left: width_mobile(47vw)
+      border-radius: 50%
+      display: block
+      position: absolute
+      transition: all 1s ease
+      opacity: 0
+    .active
+      opacity: 1
+    #ryosai
+      width: height_mobile(120vh)
+      top: height_mobile(-15vh)
+      left: width_mobile(40vw)
+      transform: rotate(0.04turn)
+      position: absolute
+    #year
+      height: height_mobile(130vh)
+      top: height_mobile(480vh)
+      left: width_mobile(-21vw)
+      transform: rotate(0.04turn)
+      position: absolute
+    #date
+      height: height_mobile(70vh)
+      top: height_mobile(648vh)
+      left: width_mobile(23vw)
+      transform: rotate(0.04turn)
+      position: absolute
+
+  nav
+    +nav
+
+  aside
+    display: none
+
+  main
+    background-image: url("../img/background.png")
+    background-size: contain
+    padding-top: 150px
+    overflow: hidden
+    .sec
+      width: 80%
+      position: relative
+      left: 10%
+      color: $gray
+      margin-bottom: 50vh
+      z-index: 1
+      img
+        height: 70px
+
+    .belt
+      width: 160vw
+      height: 20vh
+      position: absolute
+      top: -50px
+      left: -40vw
+      transform: rotate(30deg)
+      border-bottom: none
+      z-index: -1
+    
+    .right_box
+      width: 70%
+      position: absolute
+      left: 30%
+      top: 90px
+      p
+        font-size: 15px
+        margin-bottom: 20px
+    
+    .button
+      margin-top: 15px
+      padding: 10px
+      border-radius: 30px
+      display: block
+      text-align: center
+      vertical-align: middle
+      width: 80%
+      margin: auto
+      padding: 5px 20px
+      font-weight: bold
+      border-radius: 3px
+      color: $gray
+      border: 1px solid $gray
+      box-shadow: 3px 3px $gray
+      transition: 0.3s ease-in-out
+      h1
+        font-size: 20px
+
+    #crowdfunding_img
+      height: 50px
+
+    #crowdfunding_txt
+      font-size: 12px
+
+    #sponsor
+      width: 100%
+      height: auto
+      margin-top: 15px
+
+    #sponsor_box
+      margin-top: 20px
+      text-align: center
+      h1
+        font-size: 20px
+      p
+        font-size: 15px
+        margin-bottom: 20px
+
+    #last_sec
+      margin-bottom: 20vh
+
+  footer
+    +footer_mobile

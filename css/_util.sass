@@ -53,47 +53,6 @@ $red_light: #FF4091
     style: normal
 
 =header_mobile
-  width: 100vw
-  height: 100vh
-  background-image: url("../img/header_background.jpg")
-  background-size: cover
-  .slide_edge
-    width: 100vw
-    height: 100vh
-    top: 0px
-    left: 0px
-    position: absolute
-    overflow: hidden
-  .slide
-    width: width_mobile(400vw)
-    height: width_mobile(400vw)
-    top: height_mobile(92vh)
-    left: width_mobile(47vw)
-    border-radius: 50%
-    display: block
-    position: absolute
-    transition: all 1s ease
-    opacity: 0
-  .active
-    opacity: 1
-  #ryosai
-    width: height_mobile(120vh)
-    top: height_mobile(-15vh)
-    left: width_mobile(40vw)
-    transform: rotate(0.04turn)
-    position: absolute
-  #year
-    height: height_mobile(130vh)
-    top: height_mobile(480vh)
-    left: width_mobile(-21vw)
-    transform: rotate(0.04turn)
-    position: absolute
-  #date
-    height: height_mobile(70vh)
-    top: height_mobile(648vh)
-    left: width_mobile(23vw)
-    transform: rotate(0.04turn)
-    position: absolute
 
 =nav
   // default
@@ -115,7 +74,7 @@ $red_light: #FF4091
       margin-left: width_mobile(40vw)
       margin-top: height_mobile(60vh)
       display: block
-      transform: rotate(0.04turn)
+      //transform: rotate(0.04turn)
 
   .menu_circle
     width: width_mobile(80vw)
@@ -153,11 +112,21 @@ $red_light: #FF4091
     div::before, div::after
       content: ""
       transition: 0.7s ease-out
+  .menu_animation_left
+    transform: translateX(-28vw) translateY(-20vw) rotate(0.04turn) 
+  .menu_animation_right
+    transform: translateX(28vw) translateY(20vw) rotate(0.04turn)
 
   // checked
   input[type="checkbox"]:checked ~
     #menu
       top: 0
+      .menu_animation_left
+        transform: translateX(0vw) translateY(0vw) rotate(0.04turn) 
+        transition: 1.1s ease-in
+      .menu_animation_right
+        transform: translateX(0vw) translateY(0vw) rotate(0.04turn) 
+        transition: 1.1s ease-in
 
     label
       box-shadow: none
@@ -184,36 +153,22 @@ $red_light: #FF4091
   // height: 200vh
   background-image: url("../img/background.png")
   background-size: contain
-  padding-top: 300px
+  padding-top: 50px
   overflow: hidden
-  .sec
+  section
     width: 80%
-    position: relative
-    left: 10%
+    margin-left: 10%
+    margin-bottom: 20px
     color: $gray
-    margin-bottom: 50vh
-    z-index: 1
-    img
-      height: 70px
-
-  .belt
-    width: 160vw
-    height: 20vh
-    position: absolute
-    top: -50px
-    left: -40vw
-    transform: rotate(30deg)
-    border-bottom: none
-    z-index: -1
-  
-  .right_box
-    width: 70%
-    position: absolute
-    left: 30%
-    top: 90px
+    h1
+      font-size: 24px
     p
-      font-size: 15px
-      margin-bottom: 20px
+      font-size: 16px
+      line-height: 26px
+      margin: 8px 0px 16px 0px
+      text-align: justify
+    a
+      border-bottom: 1px solid $gray
   
   .button
     margin-top: 15px
@@ -233,26 +188,6 @@ $red_light: #FF4091
     transition: 0.3s ease-in-out
     h1
       font-size: 20px
-
-  #crowdfunding_img
-    height: 50px
-
-  #crowdfunding_txt
-    font-size: 12px
-
-  #sponsor
-    width: 100%
-    height: auto
-    margin-top: 15px
-
-  #sponsor_box
-    margin-top: 20px
-    text-align: center
-    h1
-      font-size: 20px
-    p
-      font-size: 15px
-      margin-bottom: 20px
 
 =footer_mobile
   padding: 5vh
@@ -279,6 +214,6 @@ h1, h2, h3, h4, h5, h6, p, li, a
 
 a
   text-decoration: none
-  border-bottom: 2px solid $yellow
+  // border-bottom: 2px solid $yellow
   color: $gray
 
