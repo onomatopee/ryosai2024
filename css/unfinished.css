@@ -328,6 +328,8 @@ a {
     background-size: contain;
     padding-top: 50px;
     overflow: hidden;
+    z-index: -99;
+    position: relative;
     padding-bottom: 50vh;
   }
   main section {

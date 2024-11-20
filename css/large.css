@@ -315,6 +315,23 @@ a {
   nav input[type=checkbox]:checked ~ label div::after {
     transform: rotate(45deg);
   }
+  header {
+    width: 80%;
+    position: relative;
+    left: 10%;
+    color: #C6C6C6;
+    margin-bottom: 5vh;
+    z-index: -1;
+  }
+  header .belt {
+    width: 200%;
+    height: 15vh;
+    position: absolute;
+    left: -40%;
+    transform: rotate(30deg);
+    border-bottom: none;
+    z-index: -1;
+  }
   aside {
     display: none;
   }
@@ -377,4 +394,4 @@ a {
     font-size: 12px;
     margin-top: 15px;
   }
-}/*# sourceMappingURL=small.css.map */
+}/*# sourceMappingURL=large.css.map */

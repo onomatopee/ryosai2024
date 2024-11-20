@@ -53,6 +53,21 @@ $red_light: #FF4091
     style: normal
 
 =header_mobile
+  width: 80%
+  position: relative
+  left: 10%
+  color: $gray
+  margin-bottom: 5vh
+  z-index: -1
+  .belt
+    width: 200%
+    height: 15vh
+    position: absolute
+    //top: -50px
+    left: -40%
+    transform: rotate(30deg)
+    border-bottom: none
+    z-index: -1
 
 =nav
   // default
@@ -155,6 +170,8 @@ $red_light: #FF4091
   background-size: contain
   padding-top: 50px
   overflow: hidden
+  z-index: -99
+  position: relative
   section
     width: 80%
     margin-left: 10%
