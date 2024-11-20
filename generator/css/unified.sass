@@ -1,0 +1,80 @@
+@import "util"
+
+header
+  +header
+
+main
+  //+main
+
+main
+  img
+    width: 100%
+    height: 100%
+
+.island
+  +island
+
+footer
+  +footer
+
+#result
+  margin: 0px auto 0px auto
+
+$top: 27.5px
+.res
+  @font-face
+    font-family: noto-bold
+    src: url('https://ryosai.kumano-ryo.com/ryosai2024/generator/fonts/NotoSansJP-Regular.ttf') format('truetype')
+  width: 250px
+  height: 350px
+  background-image: url(../img/back2.png)
+  background-size: 100%
+  font:
+    family: "noto-bold", sans-serif
+    weight: 600
+    style: normal
+  img
+    width: 175px
+    margin: 5px 37.5px
+  .head
+    margin: 0px 25px 0px 25px
+    position: relative
+    top: $top
+  .head_left
+    display: block
+    float: left
+    width: 50%
+    text-align: center
+    h1
+      font-size: 16px
+  .head_right
+    display: block
+    float: right
+    width: 50%
+    text-align: center
+    margin-top: 1.5px
+    //height: 58px
+    h1
+      font-size: 12.5px
+  .head:after
+    content: ""
+    display: block
+    clear: both
+  .nm
+    width: 100%
+    text-align: center
+    position: relative
+    top: $top
+    h1
+      font-size: 18.5px
+  .img
+    width: 100%
+    position: relative
+    top: $top
+  .txt
+    width: 200px
+    margin: 0px 25px
+    position: relative
+    top: $top
+    p
+      font-size: 9px

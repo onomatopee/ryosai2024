@@ -1,0 +1,81 @@
+@import "util"
+
+header
+  +header
+
+main
+  //+main
+
+main
+  img
+    width: 100%
+    height: 100%
+
+.island
+  +island
+
+footer
+  +footer
+
+#result
+  margin: 0px auto 0px auto
+
+$top: 55px
+.res
+  @font-face
+    font-family: noto-bold
+    src: url('https://onomatopee.github.io/ryosai.projectbox/fonts/NotoSansJP-Regular.ttf') format('truetype')
+  width: 500px
+  height: 700px
+  background-image: url(../img/back2.png)
+  background-size: 100%
+  font:
+    family: "noto-bold", sans-serif
+    weight: 600
+    style: normal
+  img
+    width: 350px
+    height: 350px
+    margin: 10px 75px
+  .head
+    margin: 0px 50px 0px 50px
+    position: relative
+    top: $top
+  .head_left
+    display: block
+    float: left
+    width: 50%
+    text-align: center
+    h1
+      font-size: 32px
+  .head_right
+    display: block
+    float: right
+    width: 50%
+    text-align: center
+    margin-top: 3px
+    //height: 58px
+    h1
+      font-size: 25px
+  .head:after
+    content: ""
+    display: block
+    clear: both
+  .nm
+    width: 100%
+    text-align: center
+    position: relative
+    top: $top
+    h1
+      font-size: 37px
+  .img
+    width: 100%
+    position: relative
+    top: $top
+  .txt
+    width: 400px
+    margin: 0px 50px
+    position: relative
+    top: $top
+    p
+      font-size: 18px

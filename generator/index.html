@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<head lang="ja">
+  <!-- ogp settings -->
+  <meta property="og:url" content="https://ryosai.kumano-ryo.com/ryosai2024/generator/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="【熊野寮祭2024】トップページ" />
+  <meta property="og:description" content="熊野寮祭2024は、11月29日から12月8日に開催されます。さまざまな企画が実施される、連日連夜の奇祭。ぜひお越しください！" />
+  <meta property="og:site_name" content="熊野寮祭2024" />
+  <meta property="og:image" content="https://ryosai.kumano-ryo.com/ryosai2024/img/ogp.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@kuma_d_fes">
+
+  <style id="css">
+    * {
+      padding: 0px;
+      margin: 0px;
+    }
+    .res {
+      width: 250px;
+      height: 350px;
+      background-image: url(../img/back2.png);
+      background-size: 100%;
+      font-family: "noto-bold", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: noto-bold;
+      src: url("https://ryosai.kumano-ryo.com/ryosai2024/generator/fonts/NotoSansJP-Regular.ttf") format("truetype");
+    }
+    .res img {
+      width: 175px;
+      margin: 5px 37.5px;
+    }
+    .res .head {
+      margin: 0px 25px 0px 25px;
+      position: relative;
+      top: 27.5px;
+    }
+    .res .head_left {
+      display: block;
+      float: left;
+      width: 50%;
+      text-align: center;
+    }
+    .res .head_left h1 {
+      font-size: 16px;
+    }
+    .res .head_right {
+      display: block;
+      float: right;
+      width: 50%;
+      text-align: center;
+      margin-top: 1.5px;
+    }
+    .res .head_right h1 {
+      font-size: 12.5px;
+    }
+    .res .head:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    .res .nm {
+      width: 100%;
+      text-align: center;
+      position: relative;
+      top: 27.5px;
+    }
+    .res .nm h1 {
+      font-size: 18.5px;
+    }
+    .res .img {
+      width: 100%;
+      position: relative;
+      top: 27.5px;
+    }
+    .res .txt {
+      width: 200px;
+      margin: 0px 25px;
+      position: relative;
+      top: 27.5px;
+    }
+    .res .txt p {
+      font-size: 9px;
+    }
+  </style>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <link rel="shortcut icon" href="img/favicon.png">
+  <link rel="stylesheet" href="css/unified.css">
+  <title>熊野寮祭 企画生成フォーム</title>
+</head>
+
+<body>
+
+<header>
+  <h1>Kumano Ryosai<br>2024</h1>
+</header>
+
+<main>
+  <div class="island">
+    <h1>画像生成ふぉーむについての説明</h1>
+    <p>まず、必要事項を入力してください。「ぷれびゅー」ボタンを押すと、出来栄えの雰囲気がわかります。お気に召しましたら、「じぇねれーと」を押して、画像を生成してください。このとき、数秒時間がかかりますが、ボタンを連打するとダウンロードが複数回なされてしまうので、押すのは1回で充分です。</p>
+    <p>スマホでも動く（はず）です。Chrome推奨です。</p>
+  </div>
+
+  <div class="island">
+    <h1>画像生成ふぉーむ</h1>
+    <input id="timeGetter" placeholder="企画時間" type="text">
+    <input id="placeGetter" placeholder="企画場所" type="text">
+    <input id="nmGetter" placeholder="企画名" type="text">
+    <textarea id="textGetter" placeholder="企画説明のテキスト"></textarea>
+    <!-- <input type="number" id="tentacles" name="tentacles" min="0" max="600" /> -->
+    <input type="file" id="photo">
+    <button onclick="update()">ぷれびゅー</button>
+    <!-- <button id="output" onclick="start()">generate canvas</button>
+    <button id="output" onclick="saveCanvas()">output image</button> -->
+    <button id="output" onclick="startAndSave()">じぇねれーと</button>
+    <!-- <button id="output" onclick="unified()">id</button> -->
+    <!-- <button id="output" onclick="generateImages()">一撃必殺</button> -->
+    <p></p>
+  </div>
+
+  <div class="res" id="result">
+    <div class="head">
+      <div class="head_left">
+        <h1 id="timePutter" class="font-sans">23:00</h1>
+      </div>
+      <div class="head_right">
+        <h1 id="placePutter" class="font-sans">@雪国</h1>
+      </div>
+    </div>
+    <div class="nm">
+      <h1 id="nm" class="font-sans">島村の不倫</h1>
+    </div>
+    <div class="img">
+      <img id="resImg" src="img/test.jpg">
+    </div>
+    <div class="txt">
+      <p id="textPutter">国境の長いトンネルを抜けると雪国であった。夜の底が白くなった。信号所に汽車が止まった。向側の座席から娘が立って来て、島村の前のガラス窓を落した。雪の冷気が流れこんだ。</p>
+    </div>
+  </div>
+  <canvas id="canvas" width="1000" height="1400"></canvas>
+</main>
+
+<!-- <footer>
+  <p>©2024 熊野寮祭実行委員会</p>
+</footer> -->
+
+</body>
+<script src="js/variable.js"></script>
+<script src="js/main.js"></script>
+</html>
+</html>
