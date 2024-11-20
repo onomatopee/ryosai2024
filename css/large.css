@@ -112,6 +112,23 @@ a {
     background-size: cover;
     background-attachment: fixed;
   }
+  header {
+    width: 80%;
+    position: relative;
+    left: 10%;
+    color: #C6C6C6;
+    margin-bottom: 10vh;
+    z-index: -1;
+  }
+  header .belt {
+    width: 200%;
+    height: 30vh;
+    position: absolute;
+    left: -60%;
+    transform: rotate(30deg);
+    border-bottom: none;
+    z-index: -1;
+  }
   nav {
     display: none;
   }
@@ -141,12 +158,14 @@ a {
     width: 40vw;
     margin-top: 15vh;
     margin-left: 12vw;
+    padding-bottom: 10vh;
     border-radius: 10vh;
     background-image: url("../img/background.png");
     background-size: contain;
     padding-top: 50px;
     overflow: hidden;
-    padding-bottom: 50vh;
+    position: relative;
+    z-index: -99;
   }
   main section {
     width: 80%;
@@ -320,7 +339,7 @@ a {
     position: relative;
     left: 10%;
     color: #C6C6C6;
-    margin-bottom: 5vh;
+    padding-bottom: 5vh;
     z-index: -1;
   }
   header .belt {
@@ -339,10 +358,10 @@ a {
     background-image: url("../img/background.png");
     background-size: contain;
     padding-top: 50px;
+    padding-bottom: 10vh;
     overflow: hidden;
     z-index: -99;
     position: relative;
-    padding-bottom: 50vh;
   }
   main section {
     width: 80%;

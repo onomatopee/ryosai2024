@@ -141,11 +141,14 @@ a {
     width: 40vw;
     margin-top: 15vh;
     margin-left: 12vw;
+    padding-bottom: 10vh;
     border-radius: 10vh;
     background-image: url("../img/background.png");
     background-size: contain;
     padding-top: 50px;
     overflow: hidden;
+    position: relative;
+    z-index: -99;
     padding-bottom: 50vh;
   }
   main section {
@@ -322,6 +325,7 @@ a {
     background-image: url("../img/background.png");
     background-size: contain;
     padding-top: 50px;
+    padding-bottom: 10vh;
     overflow: hidden;
     z-index: -99;
     position: relative;

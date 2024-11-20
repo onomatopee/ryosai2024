@@ -12,18 +12,35 @@
   background-attachment: fixed
 
 =header_pc
-  
+  width: 80%
+  position: relative
+  left: 10%
+  color: $gray
+  margin-bottom: 10vh
+  z-index: -1
+  .belt
+    width: 200%
+    height: 30vh
+    position: absolute
+    //top: -50px
+    left: -60%
+    transform: rotate(30deg)
+    border-bottom: none
+    z-index: -1
 
 
 =main_pc
   width: 40vw
   margin-top: 15vh
   margin-left: 12vw
+  padding-bottom: 10vh
   border-radius: 10vh
   background-image: url("../img/background.png")
   background-size: contain
   padding-top: 50px
   overflow: hidden
+  position: relative
+  z-index: -99
   section
     width: 80%
     margin-left: 10%
