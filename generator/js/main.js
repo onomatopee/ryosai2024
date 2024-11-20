@@ -1,31 +1,3 @@
-// document.getElementById("counter16").textContent = "Form(0~"+String(projects16.length-1)+")";
-// document.getElementById("counter19").textContent = "Form(0~"+String(projects19.length-1)+")";
-// document.getElementById("counter22").textContent = "Form(0~"+String(projects22.length-1)+")";
-// document.getElementById("counterU").textContent = "Form(0~"+String(projectsU.length-1)+")";
-
-function unified() {
-  let id = document.getElementById('tentacles').value;
-  routine(projectsU[id]["name"],projectsU[id]["time"],projectsU[id]["place"],projectsU[id]["txt"],"img/projects/"+projectsU[id]["imgurl"]);
-}
-
-
-function generate16() {
-  let id = document.getElementById('tentacles').value;
-  routine(projects16[id]["name"],projects16[id]["time"],projects16[id]["place"],projects16[id]["txt"],"img/projects/"+projects16[id]["imgurl"]);
-}
-
-function generate19() {
-  let id = document.getElementById('tentacles').value;
-  routine(projects19[id]["name"],projects19[id]["time"],projects19[id]["place"],projects19[id]["txt"],"img/projects/"+projects19[id]["imgurl"]);
-}
-
-function generate22() {
-  let id = document.getElementById('tentacles').value;
-  routine(projects22[id]["name"],projects22[id]["time"],projects22[id]["place"],projects22[id]["txt"],"img/projects/"+projects22[id]["imgurl"]);
-}
-
-
-
 function previewFile(file) {
   // FileReaderオブジェクトを作成
   const reader = new FileReader();
