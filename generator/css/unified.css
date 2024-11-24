@@ -91,8 +91,8 @@ footer p {
 }
 
 .res {
-  width: 250px;
-  height: 350px;
+  width: 80vw;
+  height: 112vw;
   background-image: url(../img/back2.png);
   background-size: 100%;
   font-family: "noto-bold", sans-serif;
@@ -104,13 +104,13 @@ footer p {
   src: url("https://ryosai.kumano-ryo.com/ryosai2024/generator/fonts/NotoSansJP-Regular.ttf") format("truetype");
 }
 .res img {
-  width: 175px;
-  margin: 5px 37.5px;
+  width: 56vw;
+  margin: 1.6vw 12vw;
 }
 .res .head {
-  margin: 0px 25px 0px 25px;
+  margin: 0vw 8vw 0vw 8vw;
   position: relative;
-  top: 27.5px;
+  top: 8.8vw;
 }
 .res .head_left {
   display: block;
@@ -119,17 +119,17 @@ footer p {
   text-align: center;
 }
 .res .head_left h1 {
-  font-size: 16px;
+  font-size: 5.12vw;
 }
 .res .head_right {
   display: block;
   float: right;
   width: 50%;
   text-align: center;
-  margin-top: 1.5px;
+  margin-top: 0.48vw;
 }
 .res .head_right h1 {
-  font-size: 12.5px;
+  font-size: 4vw;
 }
 .res .head:after {
   content: "";
@@ -140,22 +140,22 @@ footer p {
   width: 100%;
   text-align: center;
   position: relative;
-  top: 27.5px;
+  top: 8.8vw;
 }
 .res .nm h1 {
-  font-size: 18.5px;
+  font-size: 5.92vw;
 }
 .res .img {
   width: 100%;
   position: relative;
-  top: 27.5px;
+  top: 8.8vw;
 }
 .res .txt {
-  width: 200px;
-  margin: 0px 25px;
+  width: 64vw;
+  margin: 0px 8vw;
   position: relative;
-  top: 27.5px;
+  top: 8.8vw;
 }
 .res .txt p {
-  font-size: 9px;
+  font-size: 2.88vw;
 }/*# sourceMappingURL=unified.css.map */
