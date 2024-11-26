@@ -30,7 +30,46 @@ function project_str(proj) {
     break;
   }
 
-  if (proj_place !== "") {
+  if (proj_name.length > 18 && proj_place !== "") {
+    return `<div class="projects">
+      <input type="checkbox" class="project_popup" id="${proj_name}${proj_time}${proj_place}">
+      <label class="${color}_back" for="${proj_name}${proj_time}${proj_place}">
+        <img class="project_img" src="img/projects/${proj_imgurl}">
+        <div class="project_title">
+          <h1 class="small_point">${proj_name}</h1>
+        </div>
+        <div class="project_time_place">
+          <img src="img/time.svg">
+          <h2>${proj_date} ${proj_time}</h2>
+          <img src="img/place.svg">
+          <h2>${proj_place}</h2>
+        </div>
+        <div class="project_txt">
+          <p>${proj_txt}</p>
+        </div>
+      </label>
+
+      <div class="res">
+        <div class="large_head">
+          <div class="large_head_left">
+            <h1>${proj_time}</h1>
+          </div>
+          <div class="large_head_right">
+            <h1>@${proj_place}</h1>
+          </div>
+        </div>
+        <div class="large_nm">
+          <h1>${proj_name}</h1>
+        </div>
+        <div class="large_img">
+          <img src="img/projects/${proj_imgurl}">
+        </div>
+        <div class="large_txt">
+          <p>${proj_txt}</p>
+        </div>
+      </div>
+    </div>`;
+  } else if (proj_place !== "") {
     return `<div class="projects">
       <input type="checkbox" class="project_popup" id="${proj_name}${proj_time}${proj_place}">
       <label class="${color}_back" for="${proj_name}${proj_time}${proj_place}">
