@@ -19,6 +19,176 @@
 
   main
     +main_pc
+    z-index: 0
+    #time
+      padding-top: 1.2vw
+      padding-bottom: 2vw
+      width: 50%
+      float: left
+      button
+        margin-right: 2vw
+    #place
+      padding-top: 1.2vw
+      padding-bottom: 2vw
+      width: 50%
+      float: left
+      button
+        margin-left: 2vw
+    #time_place:after
+      content: ""
+      display: block
+      clear: both
+    button
+      background-color: transparent
+      text-align: center
+      vertical-align: middle
+      width: 14vw
+      margin: 0.8vw 0vw
+      padding: 0.4vw 0vw
+      font-weight: bold
+      border-radius: 2px
+      color: $gray
+      border: 1px solid $gray
+      box-shadow: 0.28vw 0.28vw $gray
+      transition: 0.3s ease-in-out
+      font-size: 20px
+
+  .projects
+    margin-top: 2vw
+    input[type="checkbox"]
+      display: none
+    label
+      width: 32vw
+      height: 20vw
+      margin-bottom: 4vw
+      //background-color: $gray
+      display: block
+      border-radius: 3px
+      color: $gray
+      border: 1px solid $gray
+      box-shadow: 3px 3px $gray
+    .project_img
+      height: 6.8vw
+      width: 6.8vw
+      position: relative
+      top: 1.2vw
+      left: 1.2vw
+      margin: 0
+    .project_title
+      position: relative
+      top: -5.6vw
+      left: 9.2vw
+      width: 22vw
+      height: 5.6vw
+      h1
+        font-size: 2.4vw
+        line-height: 2.8vw
+    .project_time_place
+      display: flex
+      position: relative
+      top: -3.8vw
+      left: 0.8vw
+      img
+        height: 1.2vw
+        width: auto
+        margin: 0.2vw 0.4vw 0.2vw 0.6vw
+      h2
+        font-size: 1.2vw
+        line-height: 1.4vw
+        display: block
+    .project_txt
+      width: 90%
+      position: relative
+      top: -4.2vw
+      left: 1.2vw
+      p
+        font-size: 1.2vw
+        line-height: 1.4vw
+
+    .res
+      display: none
+
+    // // checked
+    // input[type="checkbox"]:checked ~
+    //   label
+    //     width: 30vw
+    //     height: 100vw
+    //     background-color: black
+    //     opacity: 0.8
+    //     margin: 0px
+    //     display: block
+    //     border-radius: 0
+    //     border: 0px
+    //     box-shadow: 0px 0px
+    //     position: relative
+    //     top: -5vw
+    //     left: -5vw
+    //     transition: 0.7s ease-out
+    //   $top: 3.32vw
+    //   .res
+    //     display: block
+    //     width: 32vw
+    //     height: 44.8vw
+    //     z-index: 99
+    //     background-image: url(../img/back2.png)
+    //     background-size: 100%
+    //     color: black
+    //     position: relative
+    //     top: 0vw
+    //     left: 0vw
+    //     font:
+    //       family: "noto-bold", sans-serif
+    //       weight: 600
+    //       style: normal
+    //     img
+    //       width: 22.4vw
+    //       margin: 0.64vw 4.8vw
+    //     .large_head
+    //       margin: 0vw 3.2vw 0vw 3.2vw
+    //       position: relative
+    //       top: $top
+    //     .large_head_left
+    //       display: block
+    //       float: left
+    //       width: 50%
+    //       text-align: center
+    //       h1
+    //         font-size: 2.05vw
+    //     .large_head_right
+    //       display: block
+    //       float: right
+    //       width: 50%
+    //       text-align: center
+    //       margin-top: 0.19vw
+    //       //height: 58px
+    //       h1
+    //         font-size: 1.6vw
+    //     .large_head:after
+    //       content: ""
+    //       display: block
+    //       clear: both
+    //     .large_nm
+    //       width: 100%
+    //       text-align: center
+    //       position: relative
+    //       top: $top
+    //       h1
+    //         font-size: 2.18vw
+    //     .large_img
+    //       width: 100%
+    //       position: relative
+    //       top: $top
+    //     .large_txt
+    //       width: 25.6vw
+    //       margin: 0px 3.2vw
+    //       position: relative
+    //       top: $top
+    //       p
+    //         font-size: 1.15vw
+    //         line-height: 1.5
+    //         margin: 0
+    // input[type="checkbox"]:checked ~ label > div
+    //   display: none
     
   footer
     +footer_pc
@@ -65,7 +235,7 @@
       margin: 2vw 0vw
       padding: 1vw 0vw
       font-weight: bold
-      border-radius: 0.7px
+      border-radius: 2px
       color: $gray
       border: 1px solid $gray
       box-shadow: 0.7vw 0.7vw $gray
@@ -105,7 +275,7 @@
     .project_time_place
       display: flex
       position: relative
-      top: -10vw
+      top: -9.5vw
       left: 2vw
       img
         height: 3vw
@@ -129,9 +299,6 @@
 
     // checked
     input[type="checkbox"]:checked ~
-      // .project_title, .project_img, .project_time_place, .project_txt
-      .project_title
-        display: none
       label
         width: 100vw
         height: 100vh
@@ -209,6 +376,8 @@
             font-size: 2.88vw
             line-height: 1.5
             margin: 0
+    input[type="checkbox"]:checked ~ label > div
+      display: none
 
 
   footer

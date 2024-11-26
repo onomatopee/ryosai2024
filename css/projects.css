@@ -44,7 +44,7 @@ body {
   margin: 0px;
 }
 
-h1, h2, h3, h4, h5, h6, p, li, a {
+h1, h2, h3, h4, h5, h6, p, li, a, button {
   font-family: "Noto Sans JP", serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -102,7 +102,7 @@ body {
   margin: 0px;
 }
 
-h1, h2, h3, h4, h5, h6, p, li, a {
+h1, h2, h3, h4, h5, h6, p, li, a, button {
   font-family: "Noto Sans JP", serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -174,6 +174,7 @@ a {
     overflow: hidden;
     position: relative;
     z-index: -99;
+    z-index: 0;
   }
   main section {
     width: 80%;
@@ -190,8 +191,20 @@ a {
     margin: 8px 0px 16px 0px;
     text-align: justify;
   }
+  main section ul {
+    margin-top: 8px;
+  }
+  main section li {
+    font-size: 16px;
+    line-height: 26px;
+    list-style: none;
+  }
   main section a {
     border-bottom: 1px solid #C6C6C6;
+  }
+  main section img {
+    width: 100%;
+    margin: 10px 0px;
   }
   main .right_box {
     width: 80%;
@@ -222,6 +235,108 @@ a {
   }
   main .button h1 {
     font-size: 20px;
+  }
+  main #time {
+    padding-top: 1.2vw;
+    padding-bottom: 2vw;
+    width: 50%;
+    float: left;
+  }
+  main #time button {
+    margin-right: 2vw;
+  }
+  main #place {
+    padding-top: 1.2vw;
+    padding-bottom: 2vw;
+    width: 50%;
+    float: left;
+  }
+  main #place button {
+    margin-left: 2vw;
+  }
+  main #time_place:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  main button {
+    background-color: transparent;
+    text-align: center;
+    vertical-align: middle;
+    width: 14vw;
+    margin: 0.8vw 0vw;
+    padding: 0.4vw 0vw;
+    font-weight: bold;
+    border-radius: 2px;
+    color: #C6C6C6;
+    border: 1px solid #C6C6C6;
+    box-shadow: 0.28vw 0.28vw #C6C6C6;
+    transition: 0.3s ease-in-out;
+    font-size: 20px;
+  }
+  .projects {
+    margin-top: 2vw;
+  }
+  .projects input[type=checkbox] {
+    display: none;
+  }
+  .projects label {
+    width: 32vw;
+    height: 20vw;
+    margin-bottom: 4vw;
+    display: block;
+    border-radius: 3px;
+    color: #C6C6C6;
+    border: 1px solid #C6C6C6;
+    box-shadow: 3px 3px #C6C6C6;
+  }
+  .projects .project_img {
+    height: 6.8vw;
+    width: 6.8vw;
+    position: relative;
+    top: 1.2vw;
+    left: 1.2vw;
+    margin: 0;
+  }
+  .projects .project_title {
+    position: relative;
+    top: -5.6vw;
+    left: 9.2vw;
+    width: 22vw;
+    height: 5.6vw;
+  }
+  .projects .project_title h1 {
+    font-size: 2.4vw;
+    line-height: 2.8vw;
+  }
+  .projects .project_time_place {
+    display: flex;
+    position: relative;
+    top: -3.8vw;
+    left: 0.8vw;
+  }
+  .projects .project_time_place img {
+    height: 1.2vw;
+    width: auto;
+    margin: 0.2vw 0.4vw 0.2vw 0.6vw;
+  }
+  .projects .project_time_place h2 {
+    font-size: 1.2vw;
+    line-height: 1.4vw;
+    display: block;
+  }
+  .projects .project_txt {
+    width: 90%;
+    position: relative;
+    top: -4.2vw;
+    left: 1.2vw;
+  }
+  .projects .project_txt p {
+    font-size: 1.2vw;
+    line-height: 1.4vw;
+  }
+  .projects .res {
+    display: none;
   }
   footer {
     width: 100vw;
@@ -451,7 +566,7 @@ a {
     margin: 2vw 0vw;
     padding: 1vw 0vw;
     font-weight: bold;
-    border-radius: 0.7px;
+    border-radius: 2px;
     color: #C6C6C6;
     border: 1px solid #C6C6C6;
     box-shadow: 0.7vw 0.7vw #C6C6C6;
@@ -496,7 +611,7 @@ a {
   .projects .project_time_place {
     display: flex;
     position: relative;
-    top: -10vw;
+    top: -9.5vw;
     left: 2vw;
   }
   .projects .project_time_place img {
@@ -520,9 +635,6 @@ a {
     line-height: 3.5vw;
   }
   .projects .res {
-    display: none;
-  }
-  .projects input[type=checkbox]:checked ~ .project_title {
     display: none;
   }
   .projects input[type=checkbox]:checked ~ label {
@@ -612,6 +724,9 @@ a {
     font-size: 2.88vw;
     line-height: 1.5;
     margin: 0;
+  }
+  .projects input[type=checkbox]:checked ~ label > div {
+    display: none;
   }
   footer {
     padding: 5vh;
