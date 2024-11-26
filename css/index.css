@@ -18,6 +18,10 @@
   background-color: #b41959;
 }
 
+.transparent_back {
+  background-color: transparent;
+}
+
 .green_back {
   background-color: #169b31;
 }
@@ -70,6 +74,10 @@ a {
 
 .red_back {
   background-color: #b41959;
+}
+
+.transparent_back {
+  background-color: transparent;
 }
 
 .green_back {

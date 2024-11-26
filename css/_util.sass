@@ -29,6 +29,9 @@ $red_light: #FF4091
 .red_back
   background-color: $red
 
+.transparent_back
+  background-color: transparent
+
 .green_back
   background-color: $green
 
@@ -171,12 +174,12 @@ $red_light: #FF4091
   padding-top: 50px
   padding-bottom: 10vh
   overflow: hidden
-  z-index: -99
+  z-index: 0
   position: relative
   section
     width: 80%
     margin-left: 10%
-    margin-bottom: 20px
+    margin-bottom: 10vh
     color: $gray
     h1
       font-size: 24px
@@ -185,13 +188,20 @@ $red_light: #FF4091
       line-height: 26px
       margin: 8px 0px 16px 0px
       text-align: justify
+    ul
+      margin-top: 8px
+    li
+      font-size: 16px
+      line-height: 26px
+      list-style: none
     a
       border-bottom: 1px solid $gray
+    img
+      width: 100%
+      margin: 10px 0px
   
   .button
-    margin-top: 15px
     padding: 10px
-    border-radius: 30px
     display: block
     text-align: center
     vertical-align: middle

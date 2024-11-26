@@ -18,6 +18,10 @@
   background-color: #b41959;
 }
 
+.transparent_back {
+  background-color: transparent;
+}
+
 .green_back {
   background-color: #169b31;
 }
@@ -70,6 +74,10 @@ a {
 
 .red_back {
   background-color: #b41959;
+}
+
+.transparent_back {
+  background-color: transparent;
 }
 
 .green_back {
@@ -327,14 +335,14 @@ a {
     padding-top: 50px;
     padding-bottom: 10vh;
     overflow: hidden;
-    z-index: -99;
+    z-index: 0;
     position: relative;
     padding-bottom: 50vh;
   }
   main section {
     width: 80%;
     margin-left: 10%;
-    margin-bottom: 20px;
+    margin-bottom: 10vh;
     color: #C6C6C6;
   }
   main section h1 {
@@ -346,13 +354,23 @@ a {
     margin: 8px 0px 16px 0px;
     text-align: justify;
   }
+  main section ul {
+    margin-top: 8px;
+  }
+  main section li {
+    font-size: 16px;
+    line-height: 26px;
+    list-style: none;
+  }
   main section a {
     border-bottom: 1px solid #C6C6C6;
   }
+  main section img {
+    width: 100%;
+    margin: 10px 0px;
+  }
   main .button {
-    margin-top: 15px;
     padding: 10px;
-    border-radius: 30px;
     display: block;
     text-align: center;
     vertical-align: middle;

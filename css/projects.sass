@@ -5,40 +5,11 @@
   $width: 1280
   $height: 800
 
-  header
-    width: 100vw
-    height: 100vh
-    .slide
-      width: 40vw
-      height: 40vw
-      border-radius: 50%
-      top: 6vw
-      right: 10vw
-      position: absolute
-      display: block
-      overflow: hidden
-      transition: all 1s ease
-      opacity: 0
-    .active
-      opacity: 1
-    #ryosai
-      width: height_pc(120vh)
-      top: height_pc(30vh)
-      left: width_pc(60vw)
-      position: absolute
-    #year
-      height: height_pc(130vh)
-      top: height_pc(490vh)
-      left: width_pc(60vw)
-      position: absolute
-    #date
-      height: height_pc(70vh)
-      top: height_pc(660vh)
-      left: width_pc(60vw)
-      position: absolute
-    
   body
     +body_pc
+
+  header
+    +header_pc
 
   nav
     display: none
@@ -47,219 +18,198 @@
     +aside
 
   main
-    width: 40vw
-    margin-top: 10vh
-    margin-left: 12vw
-    border-radius: 10vh
-    background-image: url("../img/background.png")
-    background-size: contain
-    padding-top: 20vh
-    overflow: hidden
-    transition: 0.8s ease-in-out
-    .sec
-      width: 80%
-      position: relative
-      left: 10%
-      color: $gray
-      margin-bottom: 50vh
-      z-index: 1
-      img
-        height: 70px
-
-    .belt
-      width: 200%
-      height: 15vh
-      position: absolute
-      //top: -50px
-      left: -40%
-      transform: rotate(30deg)
-      border-bottom: none
-      z-index: -1
+    +main_pc
     
-    .right_box
-      width: 80%
-      position: absolute
-      left: 20%
-      top: 90px
-      p
-        font-size: 15px
-        margin-bottom: 20px
-    
-    .button
-      margin-top: 15px
-      padding: 10px
-      border-radius: 30px
-      display: block
-      text-align: center
-      vertical-align: middle
-      width: 80%
-      margin: auto
-      padding: 5px 20px
-      font-weight: bold
-      border-radius: 3px
-      color: $gray
-      border: 1px solid $gray
-      box-shadow: 3px 3px $gray
-      transition: 0.3s ease-in-out
-      h1
-        font-size: 20px
-
-    #crowdfunding_img
-      height: 50px
-
-    #crowdfunding_txt
-      font-size: 12px
-
-    #sponsor
-      width: 100%
-      height: auto
-      margin-top: 15px
-
-    #sponsor_box
-      margin-top: 20px
-      text-align: center
-      h1
-        font-size: 20px
-      p
-        font-size: 15px
-        margin-bottom: 20px
-
-    #last_sec
-      margin-bottom: 20vh
-
-
   footer
     +footer_pc
-
 
 @media screen and (max-width: 960px)
   $width: 392
   $height: 840
 
-  header
-    width: 100vw
-    height: 100vh
-    background-image: url("../img/header_background.jpg")
-    background-size: cover
-    .slide_edge
-      width: 100vw
-      height: 100vh
-      top: 0px
-      left: 0px
-      position: absolute
-      overflow: hidden
-    .slide
-      width: width_mobile(400vw)
-      height: width_mobile(400vw)
-      top: height_mobile(92vh)
-      left: width_mobile(47vw)
-      border-radius: 50%
-      display: block
-      position: absolute
-      transition: all 1s ease
-      opacity: 0
-    .active
-      opacity: 1
-    #ryosai
-      width: height_mobile(120vh)
-      top: height_mobile(-15vh)
-      left: width_mobile(40vw)
-      transform: rotate(0.04turn)
-      position: absolute
-    #year
-      height: height_mobile(130vh)
-      top: height_mobile(480vh)
-      left: width_mobile(-21vw)
-      transform: rotate(0.04turn)
-      position: absolute
-    #date
-      height: height_mobile(70vh)
-      top: height_mobile(648vh)
-      left: width_mobile(23vw)
-      transform: rotate(0.04turn)
-      position: absolute
-
   nav
     +nav
+
+  header
+    +header_mobile
 
   aside
     display: none
 
   main
-    background-image: url("../img/background.png")
-    background-size: contain
-    padding-top: 150px
-    overflow: hidden
-    .sec
-      width: 80%
-      position: relative
-      left: 10%
-      color: $gray
-      margin-bottom: 50vh
-      z-index: 1
-      img
-        height: 70px
-
-    .belt
-      width: 160vw
-      height: 20vh
-      position: absolute
-      top: -50px
-      left: -40vw
-      transform: rotate(30deg)
-      border-bottom: none
-      z-index: -1
-    
-    .right_box
-      width: 70%
-      position: absolute
-      left: 30%
-      top: 90px
-      p
-        font-size: 15px
-        margin-bottom: 20px
-    
-    .button
-      margin-top: 15px
-      padding: 10px
-      border-radius: 30px
+    +main_mobile
+    z-index: 0
+    #time
+      padding-top: 3vw
+      padding-bottom: 5vw
+      width: 50%
+      float: left
+      button
+        margin-right: 5vw
+    #place
+      padding-top: 3vw
+      padding-bottom: 5vw
+      width: 50%
+      float: left
+      button
+        margin-left: 5vw
+    #time_place:after
+      content: ""
       display: block
+      clear: both
+    button
+      background-color: transparent
       text-align: center
       vertical-align: middle
-      width: 80%
-      margin: auto
-      padding: 5px 20px
+      width: 35vw
+      margin: 2vw 0vw
+      padding: 1vw 0vw
       font-weight: bold
+      border-radius: 0.7px
+      color: $gray
+      border: 1px solid $gray
+      box-shadow: 0.7vw 0.7vw $gray
+      transition: 0.3s ease-in-out
+      font-size: 20px
+
+  .projects
+    margin-top: 5vw
+    input[type="checkbox"]
+      display: none
+    label
+      width: 80vw
+      height: 50vw
+      margin-bottom: 10vw
+      //background-color: $gray
+      display: block
       border-radius: 3px
       color: $gray
       border: 1px solid $gray
       box-shadow: 3px 3px $gray
-      transition: 0.3s ease-in-out
+    .project_img
+      height: 17vw
+      width: 17vw
+      position: relative
+      top: 3vw
+      left: 3vw
+      margin: 0
+    .project_title
+      position: relative
+      top: -14vw
+      left: 23vw
+      width: 55vw
+      height: 14vw
       h1
-        font-size: 20px
-
-    #crowdfunding_img
-      height: 50px
-
-    #crowdfunding_txt
-      font-size: 12px
-
-    #sponsor
-      width: 100%
-      height: auto
-      margin-top: 15px
-
-    #sponsor_box
-      margin-top: 20px
-      text-align: center
-      h1
-        font-size: 20px
+        font-size: 6vw
+        line-height: 7vw
+    .project_time_place
+      display: flex
+      position: relative
+      top: -10vw
+      left: 2vw
+      img
+        height: 3vw
+        width: auto
+        margin: 0.5vw 1vw 0.5vw 1.5vw
+      h2
+        font-size: 3vw
+        line-height: 3.5vw
+        display: block
+    .project_txt
+      width: 74vw
+      position: relative
+      top: -10.5vw
+      left: 3vw
       p
-        font-size: 15px
-        margin-bottom: 20px
+        font-size: 3vw
+        line-height: 3.5vw
 
-    #last_sec
-      margin-bottom: 20vh
+    .res
+      display: none
+
+    // checked
+    input[type="checkbox"]:checked ~
+      // .project_title, .project_img, .project_time_place, .project_txt
+      .project_title
+        display: none
+      label
+        width: 100vw
+        height: 100vh
+        background-color: black
+        opacity: 0.8
+        margin: 0px
+        display: block
+        border-radius: 0
+        border: 0px
+        box-shadow: 0px 0px
+        position: fixed
+        top: 0
+        left: 0
+        transition: 0.7s ease-out
+      $top: 8.8vw
+      .res
+        display: block
+        width: 80vw
+        height: 112vw
+        z-index: 99
+        background-image: url(../img/back2.png)
+        background-size: 100%
+        color: black
+        position: fixed
+        top: 10vw
+        left: 10vw
+        font:
+          family: "noto-bold", sans-serif
+          weight: 600
+          style: normal
+        img
+          width: 56vw
+          margin: 1.6vw 12vw
+        .large_head
+          margin: 0vw 8vw 0vw 8vw
+          position: relative
+          top: $top
+        .large_head_left
+          display: block
+          float: left
+          width: 50%
+          text-align: center
+          h1
+            font-size: 5.12vw
+        .large_head_right
+          display: block
+          float: right
+          width: 50%
+          text-align: center
+          margin-top: 0.48vw
+          //height: 58px
+          h1
+            font-size: 4vw
+        .large_head:after
+          content: ""
+          display: block
+          clear: both
+        .large_nm
+          width: 100%
+          text-align: center
+          position: relative
+          top: $top
+          h1
+            font-size: 5.92vw
+        .large_img
+          width: 100%
+          position: relative
+          top: $top
+        .large_txt
+          width: 64vw
+          margin: 0px 8vw
+          position: relative
+          top: $top
+          p
+            font-size: 2.88vw
+            line-height: 1.5
+            margin: 0
+
 
   footer
     +footer_mobile
