@@ -379,13 +379,6 @@ const projects =
       "txt": "いろんなRTAやります！"
   },
   {
-    "title": "RTA_in_KUMANO",
-    "date": "12/01",
-    "time": "13:00",
-    "place": "食堂・食北",
-    "txt": "いろんなRTAやります！"
-},
-  {
       "title": "ぬいぐるみ座談会",
       "date": "12/01",
       "time": "13:00",
@@ -3136,13 +3129,6 @@ const projects =
       "place": "ロビー等",
       "txt": "あの ADO 握手会が熊野寮にやってきた！"
   },
-  {
-    "title": "ADO握手かい",
-    "date": "",
-    "time": "常設",
-    "place": "ロビー等",
-    "txt": "あの ADO 握手会が熊野寮にやってきた！"
-},
   {
       "title": "GORILLA廃止署名活動",
       "date": "",
