@@ -9,8 +9,18 @@
 </url>
 <url>
   <loc>https://ryosai.kumano-ryo.com/ryosai2024/index.html</loc>
-  <priority>0.8</priority>
+  <priority>0.9</priority>
   <lastmod>2024-11-16T05:33:31+09:00</lastmod>
+</url>
+<url>
+  <loc>https://ryosai.kumano-ryo.com/ryosai2024/about.html</loc>
+  <priority>0.9</priority>
+  <lastmod>2024-11-27T05:33:31+09:00</lastmod>
+</url>
+<url>
+  <loc>https://ryosai.kumano-ryo.com/ryosai2024/projects.html</loc>
+  <priority>0.9</priority>
+  <lastmod>2024-11-27T05:33:31+09:00</lastmod>
 </url>
 <url>
   <loc>https://ryosai.kumano-ryo.com/ryosai2024/unfinished.html</loc>
