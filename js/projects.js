@@ -158,48 +158,56 @@ function add_hits(num) {
 
 function generator(projs) {
   clear_projs();
-  section = document.querySelector("#project_canvas");
+  let section = document.querySelector("#project_canvas");
+  let result_str = "";
   for (const proj of projs) {
-    section.innerHTML += project_str(proj);
+    result_str += project_str(proj);
   }
+  section.innerHTML += result_str;
   add_hits(projs.length);
 }
 
 function date_generator(projs,date) {
   clear_projs()
-  section = document.querySelector("#project_canvas");
+  let section = document.querySelector("#project_canvas");
   let num_hits = 0;
+  let result_str = "";
   for (const proj of projs) {
     if (proj["date"] == date) {
-      section.innerHTML += project_str(proj);
+      result_str += project_str(proj);
       num_hits++;
     }
   }
+  section.innerHTML += result_str;
   add_hits(num_hits);
 }
 
 function place_generator(projs,place) {
   clear_projs()
-  section = document.querySelector("#project_canvas");
+  let section = document.querySelector("#project_canvas");
   let num_hits = 0;
+  let result_str = "";
   for (const proj of projs) {
     if (proj["place"] == place) {
-      section.innerHTML += project_str(proj);
+      result_str += project_str(proj);
       num_hits++;
     }
   }
+  section.innerHTML += result_str;
   add_hits(num_hits);
 }
 
 function time_generator(projs,time) {
   clear_projs()
-  section = document.querySelector("#project_canvas");
+  let section = document.querySelector("#project_canvas");
   let num_hits = 0;
+  let result_str = "";
   for (const proj of projs) {
     if (proj["time"] == time) {
-      section.innerHTML += project_str(proj);
+      result_str += project_str(proj);
       num_hits++;
     }
   }
+  section.innerHTML += result_str;
   add_hits(num_hits);
 }
