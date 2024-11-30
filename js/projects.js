@@ -211,3 +211,23 @@ function time_generator(projs,time) {
   section.innerHTML += result_str;
   add_hits(num_hits);
 }
+
+function title_generator(projs,title) {
+  clear_projs()
+  let section = document.querySelector("#project_canvas");
+  let num_hits = 0;
+  let result_str = "";
+  for (let i = 0; i < projs.length; i++) {
+    if (projs[i].title.includes(title) || kanaTitles[i].includes(title)) {
+      result_str += project_str(projs[i]);
+      num_hits++;
+    }
+  }
+  section.innerHTML += result_str;
+  add_hits(num_hits);
+}
+
+function title_search() {
+  const title_text = document.getElementById("search_box").value;
+  title_generator(projects,title_text);
+}
