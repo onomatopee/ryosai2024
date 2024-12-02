@@ -311,6 +311,13 @@ a {
     transition: 0.3s ease-in-out;
     font-size: 20px;
   }
+  main #timetable_button {
+    width: 100%;
+    margin-bottom: 10vh;
+  }
+  main #timetable_img {
+    width: 100%;
+  }
   .projects {
     margin-top: 2vw;
   }
@@ -641,6 +648,12 @@ a {
     box-shadow: 0.7vw 0.7vw #C6C6C6;
     transition: 0.3s ease-in-out;
     font-size: 20px;
+  }
+  main #timetable_button {
+    width: 100%;
+  }
+  main #timetable_img {
+    width: 100%;
   }
   .projects {
     margin-top: 5vw;

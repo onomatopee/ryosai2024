@@ -1,4 +1,5 @@
-date_generator(projects,'11/29');
+generator(projects);
+let current_date = "11/29";
 
 function project_str(proj) {
   proj_name = proj["title"];
@@ -148,12 +149,21 @@ function project_str(proj) {
   }
 }
 
+function timetable_str(date) {
+  date = (date[0]+date[1]+date[3]+date[4]);
+  return `<img id="timetable_img" src="img/timetable/${date}.png">`;
+}
+
 function clear_projs() {
   document.querySelector("#project_canvas").innerHTML = "<h1 id='canvas_top'>企画一覧</h1>";
 }
 
 function add_hits(num) {
   document.querySelector("#canvas_top").innerHTML += `<p>${num}件ヒットしました。</p>`;
+}
+
+function add_date(str) {
+  document.querySelector("#canvas_top").innerHTML += `<p>${str}のタイムテーブルです。</p>`;
 }
 
 function generator(projs) {
@@ -180,21 +190,7 @@ function date_generator(projs,date) {
   }
   section.innerHTML += result_str;
   add_hits(num_hits);
-}
-
-function place_generator(projs,place) {
-  clear_projs()
-  let section = document.querySelector("#project_canvas");
-  let num_hits = 0;
-  let result_str = "";
-  for (const proj of projs) {
-    if (proj["place"] == place) {
-      result_str += project_str(proj);
-      num_hits++;
-    }
-  }
-  section.innerHTML += result_str;
-  add_hits(num_hits);
+  current_date = date;
 }
 
 function time_generator(projs,time) {
@@ -230,4 +226,11 @@ function title_generator(projs,title) {
 function title_search() {
   const title_text = document.getElementById("search_box").value;
   title_generator(projects,title_text);
+}
+
+function time_table() {
+  clear_projs()
+  let section = document.querySelector("#project_canvas");
+  section.innerHTML += timetable_str(current_date);
+  add_date(current_date);
 }
